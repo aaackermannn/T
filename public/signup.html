@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-News</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <header>
+    <div class="container header-container">
+      <a href="/index.html" class="logo" aria-label="T-News Home">
+        <img src="/img/svg/t-logo.svg" alt="T-News Logo">
+      </a>
+    </div>
+  </header>
+  <main class="login-container">
+    <h1 class="login-title">Регистрация</h1>
+    
+    <form id="signup-form">
+      <div class="login-field">
+        <label for="signup-login" class="login-label"></label>
+        <input type="text" id="signup-login" class="login-input" required placeholder="Логин">
+      </div>
+      
+      <div class="login-field">
+        <label for="signup-password" class="login-label"></label>
+        <input type="password" id="signup-password" class="login-input" required placeholder="Пароль">
+      </div>
+      
+      <div class="login-field">
+        <label for="repeat-password" class="login-label"></label>
+        <input type="password" id="repeat-password" class="login-input" required placeholder="Повторите пароль">
+      </div>
+
+      <div class="login-buttons">
+        <a href="login.html" class="login-button login-button--secondary">Войти</a>
+        <button type="submit" class="login-button login-button--primary">Зарегистрироваться</button>
+      </div>
+    </form>
+  </main>
+  <script src="/js/main.js" type="module"></script></body>
+</html>

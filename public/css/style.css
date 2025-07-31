@@ -1,0 +1,391 @@
+/* Разделённый CSS: styles.css */
+
+/* Подключаемые шрифты */
+@font-face {
+  font-family: 'Neue Haas Unica';
+  src: url('/public/fonts/neuehaasunicaw1g-regular.eot');
+  src: url('/public/fonts/neuehaasunicaw1g-regular.eot?#iefix') format('embedded-opentype'),
+       url('/public/fonts/neuehaasunicaw1g-regular.woff2') format('woff2'),
+       url('/public/fonts/neuehaasunicaw1g-regular.woff') format('woff'),
+       url('/public/fonts/neuehaasunicaw1g-regular.ttf') format('truetype'),
+       url('/public/fonts/neuehaasunicaw1g-regular.svg#neuehaasunicaw1g-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tinkoff Sans';
+  src: url('/public/fonts/tinkoffsans-medium.eot');
+  src: url('/public/fonts/tinkoffsans-medium.eot?#iefix') format('embedded-opentype'),
+       url('/public/fonts/tinkoffsans-medium.woff2') format('woff2'),
+       url('/public/fonts/tinkoffsans-medium.woff') format('woff'),
+       url('/public/fonts/tinkoffsans-medium.ttf') format('truetype'),
+       url('/public/fonts/tinkoffsans-medium.svg#tinkoffsans-medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Нормализация */
+*, ::before, ::after { box-sizing: border-box; }
+:where(ul, ol):where([class]) { padding-left: 0; }
+body, :where(blockquote, figure, fieldset):where([class]) { margin: 0; }
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol,dl):where([class]) { margin-block: 0; }
+:where(dd[class]) { margin-left: 0; }
+:where(fieldset[class]) { padding: 0; border: none; }
+:where(ul[class]) { list-style: none; }
+:where(address[class]) { font-style: normal; }
+p { --paragraphMarginBottom: 24px; margin-block: 0; }
+p:where(:not([class]):not(:last-child)) { margin-bottom: var(--paragraphMarginBottom); }
+img, video { display: block; max-width: 100%; height: auto; }
+input, textarea, select, button { font: inherit; }
+html { height: 100%; scrollbar-gutter: stable; scroll-behavior: smooth; }
+body { min-height: 100%; line-height: 1.5; }
+a:where([class]) { display: inline-flex; }
+button, label { cursor: pointer; }
+:where([fill]:not([fill="none"],[fill^="url"])) { fill: currentColor; }
+:where([stroke]:not([stroke="none"],[stroke^="url"])) { stroke: currentColor; }
+svg * { transition-property: fill, stroke; }
+:where(table) { border-collapse: collapse; border-color: currentColor; }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: 0.01ms!important; animation-iteration-count:1!important; transition-duration:0.01ms!important; scroll-behavior:auto!important;} }
+
+/* CSS переменные */
+:root {
+  --color-white: #ffffff;
+  --color-yellow: #ffdd2d;
+  --color-gray: #244A7F0F;
+  --color-header: #0010241F;
+
+  --border-radius: 12px;
+  --border-yellow: 1px solid var(--color-yellow);
+  --border: 1px solid var(--color-gray);
+
+  --font-family-base: 'Tinkoff Sans', sans-serif;
+  --font-family-accent: 'Neue Haas Unica', sans-serif;
+
+  --container-width: 1150px;
+  --container-padding: 15px;
+
+  --transition-duration: 0.2s;
+
+  scrollbar-gutter: stable;
+}
+
+/* Базовые стили */
+body {
+  font-family: var(--font-family-base);
+  color: #000;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: var(--color-white);
+  overflow-y: scroll;
+}
+
+/* Универсальный контейнер */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Header */
+header {
+  background: #F6F7F8;
+  box-shadow: 0 1px 1px var(--color-gray);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  max-width: var(--container-width)
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-yellow);
+}
+
+.logo img {
+  height: 30px;
+}
+
+/* Поиск */
+.search-bar {
+  flex: 1;
+  margin: 0 24px;
+  color: #0868ef0f;
+}
+
+.search-bar input {
+  height: 32px;
+  width: 100%;
+  max-width: 320px;
+  padding: 0 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  background-color: #244A7F0F;
+}
+
+/* Навигация */
+.nav-actions a {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 16px;
+  font-size: 15px;
+  font-family: var(--font-family-accent);
+  color: #555;
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+.nav-actions img {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.nav-actions a:hover {
+  color: var(--color-yellow);
+}
+
+/* Лента */
+.feed {
+  max-width: 1150px;
+  margin: 24px auto;
+  padding: 0 12px;
+  font-family: var(--font-family-accent);
+}
+
+/* Карточки */
+.card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 24px;
+  margin-top: 42px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--transition-duration);
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.author-avatar img { width: auto; height: auto; }
+
+.author-name {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card-body {
+  margin: 16px 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 15px;
+  color: #444;
+  letter-spacing: 0px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+  border: var(--border-yellow);
+  border-radius: 4px;
+  background-color: var(--color-yellow);
+  padding: 9px 10px;
+  margin-right: 12px;
+  color: var(--color-black);
+  transition: background var(--transition-duration);
+  height: 44px;
+}
+
+.like-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.like-btn:hover {
+  background: var(--color-white);
+  color: var(--color-yellow);
+}
+
+.like-btn span { margin-left: 6px; font-size: 14px; }
+
+
+.comments {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 143px;
+  height: 44px;
+  background: var(--color-gray);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  line-height: 20px;
+  color: #007BFF;
+  text-decoration: none;
+  transition: background var(--transition-duration), color var(--transition-duration);
+}
+
+.comments:hover {
+  background: var(--color-yellow);
+  color: var(--color-white);
+}
+
+
+/* Стили для страницы профиля */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+}
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+.avatar-wrapper .author-avatar {
+  width: 80px;
+  height: 80px;
+}
+.avatar-wrapper button {
+  margin-top: 8px;
+  padding: 6px 12px;
+}
+.profile-info {
+  flex: 1;
+}
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.subscribe-btn {
+  white-space: nowrap;
+}
+
+.comments-btn {
+  margin-left: 12px;
+  background: #EAF0FB;
+  border: none;
+  color: #007BFF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comments-btn:hover {
+  background-color: #d0ddf0;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar {
+    margin: 10px 0;
+    order: 3;
+    width: 100%;
+  }
+  
+  .nav-actions {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .card {
+    margin: 10px 0;
+  }
+}
+
+/* Новые стили для ленты и поиска */
+.no-posts, .no-results, .error {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.user-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.user-item img {
+  margin-right: 10px;
+}
+
+.filter-btn.active {
+  background-color: #4267B2;
+  color: white;
+}
+
+.post-time {
+  font-size: 0.8em;
+  color: #777;
+  margin-left: auto;
+}
+
+/* Стили для иконок в шапке */
+.nav-actions .action-link img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Единый стиль для кнопки комментариев */
+.comments-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  background: #EAF0FB;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  transition: background var(--transition-duration);
+  cursor: pointer;
+}
+
+.comments-btn:hover {
+  background: #d0ddf0;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-News</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/index.html" class="logo" aria-label="T-News Home">
+        <img src="/img/svg/t-logo.svg" alt="T-News Logo">
+      </a>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <h1 class="login-title">Вход</h1>
+    
+    <form id="login-form">
+      <div class="login-field">
+        <label for="login" class="login-label"></label>
+        <input type="text" id="login" class="login-input" required placeholder="Логин">
+      </div>
+      
+      <div class="login-field">
+        <label for="password" class="login-label"></label>
+        <input type="password" id="password" class="login-input" required placeholder="Пароль">
+      </div>
+      
+      <div class="login-buttons">
+        <a href="signup.html" class="login-button login-button--secondary">Зарегистрироваться</a>
+        <button type="submit" class="login-button login-button--primary">Войти</button>
+      </div>
+    </form>
+
+  </main>
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

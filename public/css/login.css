@@ -1,0 +1,139 @@
+/* login.css - Стили для страницы входа */
+
+/* Наследуем основные переменные и сброс стилей */
+@import url('style.css');
+
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  max-width: var(--container-width)
+}
+
+/* Контейнер формы входа */
+.login-container {
+  max-width: 480px;
+  margin: 100px auto;
+  padding: 40px;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок формы */
+.login-title {
+  font-family: var(--font-family-base);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #001024;
+}
+
+/* Поля формы */
+.login-field {
+  margin-bottom: 20px;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: #244A7F;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-accent);
+  background-color: var(--color-gray);
+  font-size: 15px;
+  transition: border-color var(--transition-duration);
+}
+
+.login-input:focus {
+  border-color: var(--color-yellow);
+  outline: none;
+}
+
+/* Кнопки */
+.login-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  
+}
+
+.login-button {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all var(--transition-duration);
+}
+
+.login-button--primary {
+  background-color: var(--color-yellow);
+  color: #001024;
+}
+
+.login-button--primary:hover {
+  background-color: #ffd700;
+}
+
+.login-button--secondary {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  color: #244A7F;
+}
+
+.login-button--secondary:hover {
+  border-color: var(--color-yellow);
+  color: #001024;
+}
+
+.login-links {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+  .login-container {
+    margin: 40px auto;
+    padding: 24px;
+  }
+  
+  .login-buttons {
+    flex-direction: column;
+  }
+}

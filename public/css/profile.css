@@ -1,0 +1,159 @@
+/* === Профиль: стили для profile.html === */
+
+/* Позиционирование профиля */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  margin: 24px 0;
+}
+
+/* Аватар */
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24px;
+}
+.avatar-wrapper .author-avatar {
+  width: 128px;
+  height: 128px;
+  border: 4px solid #CDFF04;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.change-photo-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-family-accent);
+}
+
+/* Инфо о пользователе */
+.profile-info {
+  flex: 1;
+}
+.profile-name {
+  font-family: var(--font-family-base);
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  display: inline-block;
+}
+.name-container,
+.description-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.edit-name-btn,
+.edit-description-btn {
+  background: none;
+  border: none;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.edit-name-btn img,
+.edit-description-btn img {
+  width: 20px;
+  height: 20px;
+}
+.profile-description {
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  line-height: 24px;
+  color: #333333;
+  margin: 0;
+}
+
+/* Кнопка подписки */
+.subscribe-btn {
+  align-self: flex-start;
+  margin-left: 24px;
+  padding: 10px 20px;
+  background-color: var(--color-yellow);
+  color: #001024;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Новый пост */
+.new-post {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.new-post textarea {
+  width: 100%;
+  height: 160px;
+  background: #F6F7F8;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: var(--font-family-accent);
+  font-size: 15px;
+  resize: none;
+}
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.send-btn {
+  padding: 10px 20px;
+  background-color: var(--color-yellow);
+  color: #001024;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Лента своих постов */
+.profile-feed .card {
+  margin-top: 32px;
+  border-radius: 24px;
+}
+
+/* Удаление поста (иконка мусорки) */
+.comment-delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.comment-delete img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Кнопка "Комментарии" в футере */
+.comments-btn {
+  margin-left: 12px;
+  background: #EAF0FB;
+  border: none;
+  color: #007BFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Скрываем кнопку изменения фото в чужом профиле */
+#change-avatar-btn {
+  display: none;
+}
+
+/* Показываем только в своем профиле */
+.profile-header.own-profile #change-avatar-btn {
+  display: inline-block;
+}

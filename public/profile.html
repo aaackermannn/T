@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T-News</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/profile.css">
+  <link rel="stylesheet" href="/css/comments.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="/index.html" class="logo" aria-label="T-News Home">
+        <img src="/img/svg/t-logo.svg" alt="T-News Logo">
+      </a>
+      <form class="search-bar" role="search" action="/search.html">
+        <input id="news-search" name="q" type="search" placeholder="Поиск по T-News">
+      </form>
+      <nav class="nav-actions" id="header-actions" aria-label="User actions">
+        <!-- Заполняется динамически -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Профиль -->
+    <section class="profile-header" id="profile-header">
+      <div class="avatar-wrapper">
+        <img id="profile-avatar" src="" alt="Аватар" class="author-avatar">
+        <input type="file" id="avatar-upload" accept="image/*" style="display:none">
+        <button type="button" class="change-photo-btn" id="change-avatar-btn">Изменить фото</button>
+      </div>
+      <div class="profile-info">
+        <div class="name-container">
+          <h1 class="profile-name" id="profile-name">
+            <!-- Имя будет загружено динамически -->
+          </h1>
+          <button class="edit-name-btn" aria-label="Редактировать имя" id="edit-name-btn">
+            <img src="/img/svg/edit.svg" alt="">
+          </button>
+        </div>
+        <div class="description-container">
+          <p class="profile-description" id="profile-description">
+            <!-- Описание будет загружено динамически -->
+          </p>
+          <button class="edit-description-btn" aria-label="Редактировать описание" id="edit-description-btn">
+            <img src="/img/svg/edit.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <button type="button" class="login-button--primary subscribe-btn" id="subscribe-btn" style="display:none;">Подписаться</button>
+    </section>
+
+    <!-- Новый пост (только для своего профиля) -->
+    <section class="new-post" id="new-post-section" style="display:none;">
+      <textarea id="new-post-text" placeholder="Введите свой пост" rows="4"></textarea>
+      <div class="post-actions">
+        <button type="button" class="send-btn" id="send-post-btn">Отправить</button>
+      </div>
+    </section>
+
+    <!-- Лента постов -->
+    <section class="profile-feed" id="posts-container">
+      <!-- Посты будут загружены динамически -->
+    </section>
+  </main>
+  
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

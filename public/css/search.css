@@ -1,0 +1,56 @@
+/* Стили для поиска */
+.search-filters {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+}
+.filter-btn {
+  height: 44px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-gray);
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: var(--font-family-accent);
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: #001024;
+}
+
+.filter-btn:not(.active) {
+  background-color: #fff;
+  color: #001024;
+}
+
+.search-results {
+  margin-top: 16px;
+}
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.user-item:hover {
+  background-color: var(--color-gray);
+}
+.user-item .author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+.user-name {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-family-base);
+}
