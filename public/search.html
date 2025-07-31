@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Поиск | T-News</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/search.css">
-</head>
-<body>
-  <header>
-    <div class="container header-container">
-      <a href="/index.html" class="logo" aria-label="T-News Home">
-        <img src="/img/svg/t-logo.svg" alt="T-News Logo">
-      </a>
-      <form class="search-bar" role="search">
-        <input id="global-search" type="search" placeholder="Поиск по T-News" value="">
-      </form>
-      <nav class="nav-actions" id="header-actions" aria-label="User actions">        <!-- Заполняется динамически -->
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Поиск | T-News</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/search.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="/index.html" class="logo" aria-label="T-News Home">
+          <img src="/img/svg/t-logo.svg" alt="T-News Logo" />
+        </a>
+        <form class="search-bar" role="search">
+          <input
+            id="global-search"
+            type="search"
+            placeholder="Поиск по T-News"
+            value=""
+          />
+        </form>
+        <nav class="nav-actions" id="header-actions" aria-label="User actions">
+          <!-- Заполняется динамически -->
+        </nav>
+      </div>
+    </header>
 
-  <main class="container">
-    <div class="search-filters">
-      <button data-type="users" class="filter-btn login-button--secondary">Пользователи</button>
-      <button data-type="posts" class="filter-btn login-button--secondary">Посты</button>
-    </div>
-    <div class="search-results" id="results"></div>
-  </main>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const query = params.get('q') || '';
-      const input = document.getElementById('global-search');
-      if (input) {
-        input.value = query;
-        input.focus();
-      }
-    });
-  </script>
+    <main class="container">
+      <div class="search-filters">
+        <button data-type="users" class="filter-btn login-button--secondary">
+          Пользователи
+        </button>
+        <button data-type="posts" class="filter-btn login-button--secondary">
+          Посты
+        </button>
+      </div>
+      <div class="search-results" id="results"></div>
+    </main>
 
-  <script src="/js/main.js" type="module"></script>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q") || "";
+        const input = document.getElementById("global-search");
+        if (input) {
+          input.value = query;
+          input.focus();
+        }
+      });
+    </script>
+
+    <script src="/js/main.js" type="module"></script>
+  </body>
 </html>

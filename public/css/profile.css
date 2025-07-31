@@ -17,14 +17,14 @@
 .avatar-wrapper .author-avatar {
   width: 128px;
   height: 128px;
-  border: 4px solid #CDFF04;
+  border: 4px solid #cdff04;
   border-radius: 50%;
   object-fit: cover;
 }
 .change-photo-btn {
   margin-top: 12px;
   padding: 8px 16px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -96,7 +96,7 @@
 .new-post textarea {
   width: 100%;
   height: 160px;
-  background: #F6F7F8;
+  background: #f6f7f8;
   border: none;
   border-radius: 12px;
   padding: 16px;
@@ -139,9 +139,9 @@
 /* Кнопка "Комментарии" в футере */
 .comments-btn {
   margin-left: 12px;
-  background: #EAF0FB;
+  background: #eaf0fb;
   border: none;
-  color: #007BFF;
+  color: #007bff;
   padding: 6px 12px;
   border-radius: 8px;
   font-size: 14px;

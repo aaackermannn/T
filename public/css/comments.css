@@ -11,7 +11,7 @@
 }
 
 .comment-item {
-  background: #F6F7F8;
+  background: #f6f7f8;
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
@@ -71,7 +71,7 @@
 .new-comment-text {
   width: 100%;
   min-height: 100px;
-  background: #F6F7F8;
+  background: #f6f7f8;
   border: none;
   border-radius: 12px;
   padding: 16px;

@@ -2,65 +2,133 @@
 
 /* Подключаемые шрифты */
 @font-face {
-  font-family: 'Neue Haas Unica';
-  src: url('/public/fonts/neuehaasunicaw1g-regular.eot');
-  src: url('/public/fonts/neuehaasunicaw1g-regular.eot?#iefix') format('embedded-opentype'),
-       url('/public/fonts/neuehaasunicaw1g-regular.woff2') format('woff2'),
-       url('/public/fonts/neuehaasunicaw1g-regular.woff') format('woff'),
-       url('/public/fonts/neuehaasunicaw1g-regular.ttf') format('truetype'),
-       url('/public/fonts/neuehaasunicaw1g-regular.svg#neuehaasunicaw1g-regular') format('svg');
+  font-family: "Neue Haas Unica";
+  src: url("/public/fonts/neuehaasunicaw1g-regular.eot");
+  src: url("/public/fonts/neuehaasunicaw1g-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/public/fonts/neuehaasunicaw1g-regular.woff2") format("woff2"),
+    url("/public/fonts/neuehaasunicaw1g-regular.woff") format("woff"),
+    url("/public/fonts/neuehaasunicaw1g-regular.ttf") format("truetype"),
+    url("/public/fonts/neuehaasunicaw1g-regular.svg#neuehaasunicaw1g-regular")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Tinkoff Sans';
-  src: url('/public/fonts/tinkoffsans-medium.eot');
-  src: url('/public/fonts/tinkoffsans-medium.eot?#iefix') format('embedded-opentype'),
-       url('/public/fonts/tinkoffsans-medium.woff2') format('woff2'),
-       url('/public/fonts/tinkoffsans-medium.woff') format('woff'),
-       url('/public/fonts/tinkoffsans-medium.ttf') format('truetype'),
-       url('/public/fonts/tinkoffsans-medium.svg#tinkoffsans-medium') format('svg');
+  font-family: "Tinkoff Sans";
+  src: url("/public/fonts/tinkoffsans-medium.eot");
+  src: url("/public/fonts/tinkoffsans-medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/public/fonts/tinkoffsans-medium.woff2") format("woff2"),
+    url("/public/fonts/tinkoffsans-medium.woff") format("woff"),
+    url("/public/fonts/tinkoffsans-medium.ttf") format("truetype"),
+    url("/public/fonts/tinkoffsans-medium.svg#tinkoffsans-medium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 /* Нормализация */
-*, ::before, ::after { box-sizing: border-box; }
-:where(ul, ol):where([class]) { padding-left: 0; }
-body, :where(blockquote, figure, fieldset):where([class]) { margin: 0; }
-:where(h1,h2,h3,h4,h5,h6,p,ul,ol,dl):where([class]) { margin-block: 0; }
-:where(dd[class]) { margin-left: 0; }
-:where(fieldset[class]) { padding: 0; border: none; }
-:where(ul[class]) { list-style: none; }
-:where(address[class]) { font-style: normal; }
-p { --paragraphMarginBottom: 24px; margin-block: 0; }
-p:where(:not([class]):not(:last-child)) { margin-bottom: var(--paragraphMarginBottom); }
-img, video { display: block; max-width: 100%; height: auto; }
-input, textarea, select, button { font: inherit; }
-html { height: 100%; scrollbar-gutter: stable; scroll-behavior: smooth; }
-body { min-height: 100%; line-height: 1.5; }
-a:where([class]) { display: inline-flex; }
-button, label { cursor: pointer; }
-:where([fill]:not([fill="none"],[fill^="url"])) { fill: currentColor; }
-:where([stroke]:not([stroke="none"],[stroke^="url"])) { stroke: currentColor; }
-svg * { transition-property: fill, stroke; }
-:where(table) { border-collapse: collapse; border-color: currentColor; }
-@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: 0.01ms!important; animation-iteration-count:1!important; transition-duration:0.01ms!important; scroll-behavior:auto!important;} }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+  margin: 0;
+}
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+:where(dd[class]) {
+  margin-left: 0;
+}
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+:where(ul[class]) {
+  list-style: none;
+}
+:where(address[class]) {
+  font-style: normal;
+}
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+a:where([class]) {
+  display: inline-flex;
+}
+button,
+label {
+  cursor: pointer;
+}
+:where([fill]:not([fill="none"], [fill^="url"])) {
+  fill: currentColor;
+}
+:where([stroke]:not([stroke="none"], [stroke^="url"])) {
+  stroke: currentColor;
+}
+svg * {
+  transition-property: fill, stroke;
+}
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* CSS переменные */
 :root {
   --color-white: #ffffff;
   --color-yellow: #ffdd2d;
-  --color-gray: #244A7F0F;
-  --color-header: #0010241F;
+  --color-gray: #244a7f0f;
+  --color-header: #0010241f;
 
   --border-radius: 12px;
   --border-yellow: 1px solid var(--color-yellow);
   --border: 1px solid var(--color-gray);
 
-  --font-family-base: 'Tinkoff Sans', sans-serif;
-  --font-family-accent: 'Neue Haas Unica', sans-serif;
+  --font-family-base: "Tinkoff Sans", sans-serif;
+  --font-family-accent: "Neue Haas Unica", sans-serif;
 
   --container-width: 1150px;
   --container-padding: 15px;
@@ -89,7 +157,7 @@ body {
 
 /* Header */
 header {
-  background: #F6F7F8;
+  background: #f6f7f8;
   box-shadow: 0 1px 1px var(--color-gray);
 }
 
@@ -98,7 +166,7 @@ header .container {
   align-items: center;
   justify-content: space-between;
   padding: 12px;
-  max-width: var(--container-width)
+  max-width: var(--container-width);
 }
 
 .logo {
@@ -127,7 +195,7 @@ header .container {
   border-radius: var(--border-radius);
   font-family: var(--font-family-accent);
   font-size: 15px;
-  background-color: #244A7F0F;
+  background-color: #244a7f0f;
 }
 
 /* Навигация */
@@ -171,7 +239,6 @@ header .container {
   transition: box-shadow var(--transition-duration);
 }
 
-
 .card-header {
   display: flex;
   align-items: center;
@@ -187,7 +254,10 @@ header .container {
   margin-right: 12px;
 }
 
-.author-avatar img { width: auto; height: auto; }
+.author-avatar img {
+  width: auto;
+  height: auto;
+}
 
 .author-name {
   font-family: var(--font-family-base);
@@ -233,8 +303,10 @@ header .container {
   color: var(--color-yellow);
 }
 
-.like-btn span { margin-left: 6px; font-size: 14px; }
-
+.like-btn span {
+  margin-left: 6px;
+  font-size: 14px;
+}
 
 .comments {
   display: inline-flex;
@@ -248,16 +320,16 @@ header .container {
   font-family: var(--font-family-accent);
   font-size: 15px;
   line-height: 20px;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
-  transition: background var(--transition-duration), color var(--transition-duration);
+  transition: background var(--transition-duration),
+    color var(--transition-duration);
 }
 
 .comments:hover {
   background: var(--color-yellow);
   color: var(--color-white);
 }
-
 
 /* Стили для страницы профиля */
 .profile-header {
@@ -292,9 +364,9 @@ header .container {
 
 .comments-btn {
   margin-left: 12px;
-  background: #EAF0FB;
+  background: #eaf0fb;
   border: none;
-  color: #007BFF;
+  color: #007bff;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 14px;
@@ -311,25 +383,27 @@ header .container {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .search-bar {
     margin: 10px 0;
     order: 3;
     width: 100%;
   }
-  
+
   .nav-actions {
     justify-content: center;
     margin-top: 10px;
   }
-  
+
   .card {
     margin: 10px 0;
   }
 }
 
 /* Новые стили для ленты и поиска */
-.no-posts, .no-results, .error {
+.no-posts,
+.no-results,
+.error {
   text-align: center;
   padding: 20px;
   color: #666;
@@ -352,7 +426,7 @@ header .container {
 }
 
 .filter-btn.active {
-  background-color: #4267B2;
+  background-color: #4267b2;
   color: white;
 }
 
@@ -375,12 +449,12 @@ header .container {
   justify-content: center;
   height: 44px;
   padding: 0 16px;
-  background: #EAF0FB;
+  background: #eaf0fb;
   border: none;
   border-radius: 8px;
   font-family: var(--font-family-accent);
   font-size: 15px;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   transition: background var(--transition-duration);
   cursor: pointer;
