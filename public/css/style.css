@@ -299,7 +299,8 @@ header .container {
 }
 
 .like-btn:hover {
-  background: var(--color-white);
+  background: #fef600;
+  border: #fef600;
   color: var(--color-yellow);
 }
 

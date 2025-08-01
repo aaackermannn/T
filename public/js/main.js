@@ -136,7 +136,7 @@ function initLikes() {
             body: JSON.stringify({ postId }),
           });
           btn.classList.add("liked");
-          likeIcon.src = "/img/svg/like-filled.svg";
+          likeIcon.src = "/img/svg/like.svg";
           likeCount.textContent = parseInt(likeCount.textContent) + 1;
         }
       } catch (error) {
