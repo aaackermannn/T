@@ -1,13 +1,9 @@
-/* === Профиль: стили для profile.html === */
-
-/* Позиционирование профиля */
 .profile-header {
   display: flex;
   align-items: flex-start;
   margin: 24px 0;
 }
 
-/* Аватар */
 .avatar-wrapper {
   display: flex;
   flex-direction: column;
@@ -33,7 +29,6 @@
   font-family: var(--font-family-accent);
 }
 
-/* Инфо о пользователе */
 .profile-info {
   flex: 1;
 }
@@ -70,7 +65,6 @@
   margin: 0;
 }
 
-/* Кнопка подписки */
 .subscribe-btn {
   align-self: flex-start;
   margin-left: 24px;
@@ -85,7 +79,6 @@
   white-space: nowrap;
 }
 
-/* Новый пост */
 .new-post {
   display: flex;
   flex-direction: column;
@@ -118,13 +111,11 @@
   cursor: pointer;
 }
 
-/* Лента своих постов */
 .profile-feed .card {
   margin-top: 32px;
   border-radius: 24px;
 }
 
-/* Удаление поста (иконка мусорки) */
 .comment-delete {
   margin-left: auto;
   background: none;
@@ -136,7 +127,6 @@
   height: 16px;
 }
 
-/* Кнопка "Комментарии" в футере */
 .comments-btn {
   margin-left: 12px;
   background: #eaf0fb;
@@ -148,12 +138,10 @@
   cursor: pointer;
 }
 
-/* Скрываем кнопку изменения фото в чужом профиле */
 #change-avatar-btn {
   display: none;
 }
 
-/* Показываем только в своем профиле */
 .profile-header.own-profile #change-avatar-btn {
   display: inline-block;
 }

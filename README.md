@@ -15,10 +15,11 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш-логин/t-news.git
-cd t-news
+git https://github.com/aaackermannn/T.git
+cd T
 
 Установите зависимости:
+
 npm install
 
 Тестовые пользователи

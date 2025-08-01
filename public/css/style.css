@@ -1,6 +1,3 @@
-/* Разделённый CSS: styles.css */
-
-/* Подключаемые шрифты */
 @font-face {
   font-family: "Neue Haas Unica";
   src: url("/public/fonts/neuehaasunicaw1g-regular.eot");
@@ -116,7 +113,6 @@ svg * {
   }
 }
 
-/* CSS переменные */
 :root {
   --color-white: #ffffff;
   --color-yellow: #ffdd2d;
@@ -138,7 +134,6 @@ svg * {
   scrollbar-gutter: stable;
 }
 
-/* Базовые стили */
 body {
   font-family: var(--font-family-base);
   color: #000;
@@ -148,14 +143,12 @@ body {
   overflow-y: scroll;
 }
 
-/* Универсальный контейнер */
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
 
-/* Header */
 header {
   background: #f6f7f8;
   box-shadow: 0 1px 1px var(--color-gray);
@@ -179,7 +172,6 @@ header .container {
   height: 30px;
 }
 
-/* Поиск */
 .search-bar {
   flex: 1;
   margin: 0 24px;
@@ -198,7 +190,6 @@ header .container {
   background-color: #244a7f0f;
 }
 
-/* Навигация */
 .nav-actions a {
   display: inline-flex;
   align-items: center;
@@ -220,7 +211,6 @@ header .container {
   color: var(--color-yellow);
 }
 
-/* Лента */
 .feed {
   max-width: 1150px;
   margin: 24px auto;
@@ -228,7 +218,6 @@ header .container {
   font-family: var(--font-family-accent);
 }
 
-/* Карточки */
 .card {
   background: var(--color-white);
   border-radius: var(--border-radius);
@@ -332,7 +321,6 @@ header .container {
   color: var(--color-white);
 }
 
-/* Стили для страницы профиля */
 .profile-header {
   display: flex;
   align-items: center;
@@ -401,7 +389,6 @@ header .container {
   }
 }
 
-/* Новые стили для ленты и поиска */
 .no-posts,
 .no-results,
 .error {
@@ -463,4 +450,92 @@ header .container {
 
 .comments-btn:hover {
   background: #d0ddf0;
+}
+
+@media (max-width: 360px) {
+  :root {
+    --container-padding: 8px;
+    --font-size-base: 14px;
+    --border-radius: 8px;
+  }
+  body {
+    font-size: var(--font-size-base);
+    line-height: 1;
+  }
+  .header-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .search-bar input {
+    max-width: 80%;
+    padding: 0 8px;
+    margin-left: 10px;
+  }
+  .logo img {
+    height: 24px;
+  }
+  .nav-actions a {
+    margin-left: 8px;
+  }
+  .card {
+    margin: 16px 0;
+    padding: 12px;
+    border-radius: var(--border-radius);
+  }
+}
+
+/* Mobile L: экраны от 361px до 480px */
+@media (min-width: 361px) and (max-width: 480px) {
+  :root {
+    --container-padding: 12px;
+    --font-size-base: 15px;
+    --border-radius: 10px;
+  }
+  body {
+    font-size: var(--font-size-base);
+    line-height: 1;
+  }
+  .header-container {
+    flex-direction: row;
+    padding: var(--container-padding);
+  }
+  .search-bar {
+    margin: 0 12px;
+  }
+  .card {
+    margin: 20px 0;
+  }
+}
+
+/* Tablet: экраны от 481px до 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --container-padding: 15px;
+    --font-size-base: 16px;
+    --border-radius: 12px;
+  }
+  body {
+    font-size: var(--font-size-base);
+    line-height: 1;
+  }
+
+  .header-container {
+    flex-direction: row;
+    padding: var(--container-padding);
+  }
+  .search-bar input {
+    max-width: 100%;
+    padding: 0 8px;
+    margin-left: 270px;
+  }
+  .container {
+    padding: 0 var(--container-padding);
+  }
+  .card {
+    margin: 24px 0;
+    padding: 16px;
+  }
+  .search-bar input {
+    max-width: 280px;
+  }
 }
